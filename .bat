@@ -1,3 +1,5 @@
+@echo off
+
 powershell -window hidden -command ""
 
     IF "%PROCESSOR_ARCHITECTURE%" EQU "amd64" (
